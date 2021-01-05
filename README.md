@@ -43,7 +43,7 @@ Two steps to do this:
     - `Purchase.belongsTo(Person)`
     - `Purchase.belongsTo(Item)`
 
-### Modify `Purchase.init()`
+### 1. Modify `Purchase.init()`
 
 For each foreign key:
 - change the value to an object
@@ -70,4 +70,22 @@ For each foreign key:
     sequelize,
     modelName: 'Purchase',
   });
+```
+
+
+### 2. Add association calls inside the `associate()` function
+
+```js
+    static associate(models) {
+      // Use models.Person instead of doing a 
+      // require('./person).
+      // This avoids "circular imports"
+      Purchase.belongsTo(models.Person, {
+        foreignKey: 'personId'
+      });
+      Purchase.belongsTo(models.Item, {
+        foreignKey: 'itemId'
+      });
+
+    }
 ```

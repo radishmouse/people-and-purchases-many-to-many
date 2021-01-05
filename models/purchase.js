@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+
+      // Use models.Person instead of doing a 
+      // require('./person).
+      // This avoids "circular imports"
       Purchase.belongsTo(models.Person, {
         foreignKey: 'personId'
       });
