@@ -14,8 +14,20 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Purchase.init({
-    personId: DataTypes.INTEGER,
-    itemId: DataTypes.INTEGER
+    personId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Person',
+        key: 'id'
+      }
+    },
+    itemId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Item',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'Purchase',
