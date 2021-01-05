@@ -89,3 +89,10 @@ For each foreign key:
 
     }
 ```
+
+## Magic methods!
+
+```js
+const p = await Person.findByPk(1);
+const items = await p.getItems();
+```

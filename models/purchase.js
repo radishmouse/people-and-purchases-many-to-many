@@ -21,7 +21,6 @@ module.exports = (sequelize, DataTypes) => {
       Purchase.belongsTo(models.Item, {
         foreignKey: 'itemId'
       });
-
     }
   };
   Purchase.init({
