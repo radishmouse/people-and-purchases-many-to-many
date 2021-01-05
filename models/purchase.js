@@ -21,6 +21,17 @@ module.exports = (sequelize, DataTypes) => {
       Purchase.belongsTo(models.Item, {
         foreignKey: 'itemId'
       });
+
+      models.Person.belongsToMany(models.Item, {
+        through: Purchase,
+        foreignKey: 'personId'
+      });
+
+      models.Item.belongsToMany(models.Person, {
+        through: Purchase,
+        foreignKey: 'itemId'
+      });
+
     }
   };
   Purchase.init({
