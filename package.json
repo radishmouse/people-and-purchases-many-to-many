@@ -1,0 +1,29 @@
+{
+  "name": "people-and-purchases-many-to-many",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radishmouse/people-and-purchases-many-to-many.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radishmouse/people-and-purchases-many-to-many/issues"
+  },
+  "homepage": "https://github.com/radishmouse/people-and-purchases-many-to-many#readme",
+  "dependencies": {
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "sequelize-cli": "^6.2.0"
+  }
+}
